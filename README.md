@@ -10,6 +10,17 @@ Notice: In my experience rate-limits are rather strict.
 
 ### Install this integration via HACS (WIP)
 
+- Ensure you have [HACS](https://www.hacs.xyz/docs/use/) installed.
+- On the [HACS repositories](https://www.hacs.xyz/docs/use/repositories/dashboard/#browsing-repositories) page, add a new custom repository:
+
+```plain
+Repository: FoseFx/avvhafas
+Type: Integration
+```
+
+- On the same page: Search for `avvhafas` and download the component.
+- Continue with Configuration
+
 ### Configuration
 
 Extend your configuration.yaml
@@ -26,11 +37,20 @@ And restart Home Assistant.
 
 You can now configure new trip sensors from the integration configuration page.
 
-TODO
+- Settings -> Devices & Service -> Add Integration
+- Search `avv hafas`
+- Follow the configuration wizard
+
+You now have a new sensor!
 
 ### (Optional) Install avvhafas-cards
 
-TODO
+You can now write templates against this sensor.
+For the format of the sensor data, have a look at the sensor.py.
+
+You can also install the avvhafas-cards dashboard.
+
+See https://github.com/FoseFx/avvhafas-cards#installation
 
 ## Disclaimers
 
@@ -38,3 +58,4 @@ This project is unaffiliated with the AVV.
 
 No warranty of any kind, see LICENSE for details.
 
+This project does not take feature requests.
