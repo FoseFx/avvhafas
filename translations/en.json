@@ -1,0 +1,27 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "Create a new sensor entity for trips from an origin to a destination using the AVV HaFas-API. Due to rather strict rate-limits a schedule sensor needs to be provided. The trips sensor will only update when the schedule sensor is active. This way we prevent over-querying, e.g. at night.",
+                "data": {
+                    "name": "Name",
+                    "interval": "Query Interval",
+                    "schedule": "Schedule Sensor"
+                }
+            },
+            "origin": {
+                "data": {
+                    "origin": "Origin"
+                }
+            },
+            "destination": {
+                "data": {
+                    "destination": "Destination"
+                }
+            }
+        },
+        "abort": {
+            "reconfigure_successful": "[%key:common::config_flow::abort::reconfigure_successful%]"
+        }
+    }
+}

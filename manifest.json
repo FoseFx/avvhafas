@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "domain": "avvhafas",
+  "name": "avv hafas",
+  "codeowners": [
+    "@FoseFx"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://www.home-assistant.io/integrations/avvhafas",
+  "homekit": {},
+  "iot_class": "cloud_polling",
+  "quality_scale": "bronze",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": []
+}
