@@ -2,11 +2,11 @@
     "config": {
         "step": {
             "user": {
-                "description": "Create a new sensor entity for trips from an origin to a destination using the AVV HaFas-API. Due to rather strict rate-limits a schedule sensor needs to be provided. The trips sensor will only update when the schedule sensor is active. This way we prevent over-querying, e.g. at night.",
+                "description": "Create a new sensor entity for trips from an origin to a destination using the AVV HaFas-API. Due to rather strict rate-limits a schedule, binary sensor or input boolean needs to be provided. The trips sensor will only update while that entity is on. This way we prevent over-querying, e.g. at night.",
                 "data": {
                     "name": "Name",
                     "interval": "Query Interval",
-                    "schedule": "Schedule Sensor"
+                    "schedule": "Active when on"
                 }
             },
             "origin": {

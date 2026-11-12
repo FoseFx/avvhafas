@@ -85,7 +85,11 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     vol.Required(
                         CONF_SCHEDULE,
                         default=defaults[CONF_SCHEDULE],
-                    ): EntitySelector(EntitySelectorConfig(domain="schedule")),
+                    ): EntitySelector(
+                        EntitySelectorConfig(
+                            domain=["schedule", "binary_sensor", "input_boolean"]
+                        )
+                    ),
                 }
             ),
         )
